@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # creationTimestamp: "2026-04-29T09:43:45Z"
+  labels:
+    app: fastapi
+  name: fastapi-svc
+  namespace: fastapi
+  # resourceVersion: "8973"
+  # uid: b154cc94-b12f-4c44-88c6-bf6cd7b9fe54
+spec:
+  # clusterIP: 10.106.81.96
+  # clusterIPs:
+  # - 10.106.81.96
+  # externalTrafficPolicy: Cluster
+  # internalTrafficPolicy: Cluster
+  # ipFamilies:
+  # - IPv4
+  # ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31759
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: fastapi
+  # sessionAffinity: None
+  type: NodePort
+# status:
+#   loadBalancer: {}
