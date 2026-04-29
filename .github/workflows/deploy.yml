@@ -36,6 +36,6 @@ jobs:
             cd ~/app/pythonFastAPIapp
             kubectl apply -f fastapi-deployment.yaml
             kubectl apply -f fastapi-svc.yaml
-            kubectl rollout restart deployment fastapi
+            kubectl rollout restart deployment fastapi -n fastapi
 
 
