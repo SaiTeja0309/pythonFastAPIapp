@@ -19,7 +19,7 @@ def read_root():
 # 2. Path parameter API
 @app.get("/items/{item_id}")
 def get_item(item_id: int):
-    return {"item_id": item_id, "message": "Item fetched successfully"}
+    return {"item_id": item_id, "message": "Item fetched successfully !!"}
 
 
 # 3. Query parameter API
