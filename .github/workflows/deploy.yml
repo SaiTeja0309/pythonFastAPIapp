@@ -33,6 +33,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            cd ~
+            git clone https://github.com/SaiTeja0309/pythonFastAPIapp.git
             cd ~/pythonFastAPIapp
             kubectl apply -f fastapi-deployment.yaml
             kubectl apply -f fastapi-svc.yaml
